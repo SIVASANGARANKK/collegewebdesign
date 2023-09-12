@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+     <link rel="icon" type="image/x-icon" href="./robot.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dancing Robo</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 95vh;
+      margin: 0;
+      flex-direction: column;
+      background-color: aqua;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .head,
+    .left_arm,
+    .torso,
+    .right_arm,
+    .left_leg,
+    .right_leg {
+      background-color: black;
+    }
+
+    .head {
+      width: 200px;
+      margin: 0 auto;
+      height: 150px;
+      border-radius: 20%;
+      margin-bottom: 1px;
+    }
+
+    .eyes {
+      position: relative;
+      top: 70px;
+    }
+
+    .left_eye,
+    .right_eye {
+      width: 20px;
+      height: 20px;
+      border-radius: 15px;
+      background-color: white;
+      display: inline-block;
+    }
+
+    .left_eye {
+      margin-left: 35px;
+    }
+
+    .right_eye {
+      margin-left: 80px;
+    }
+
+    .upper_body {
+      width: 300px;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .left_arm,
+    .right_arm {
+      width: 40px;
+      height: 125px;
+      border-radius: 100px;
+      margin-top: 20px;
+      margin: 0 auto;
+    }
+
+    .left_arm {
+      /* margin-right: 10px; */
+      transform: rotate(45deg);
+    }
+
+    .right_arm {
+      /* margin-left: 10px; */
+      transform: rotate(-45deg);
+    }
+
+    .torso {
+      width: 200px;
+      height: 200px;
+      clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+      transition: border-radius 1s;
+    }
+
+    .lower_body {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      display: flex;
+    }
+    .left_shoe {
+      background-color: black;
+      height: 60px;
+      width: 40px;
+      margin: 0 auto;
+      border-radius: 0% 0% 40% 40%;
+      transform: rotate(60deg);
+    }
+    .right_shoe {
+      background-color: black;
+      height: 60px;
+      width: 40px;
+      margin: 0 auto;
+      border-radius: 0% 0% 40% 40%;
+      transform: rotate(60deg);
+    }
+
+    .left_leg,
+    .right_leg {
+      width: 40px;
+      height: 120px;
+      border-radius: 0 0 100px 100px;
+      display: inline-block;
+    }
+
+    .l_leg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .r_leg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_leg {
+      margin-left: 45px;
+    }
+
+    .right_leg {
+      margin-left: 30px;
+    }
+    .robots:hover .torso {
+      border-radius: 40%;
+      animation: movetorso 2s infinite;
+    }
+
+    .robots:hover .left_arm {
+      animation: moveleftarm 5s infinite;
+    }
+
+    .robots:hover .right_arm {
+      animation: moverightarm 5s infinite;
+    }
+
+    .robots:hover .left_leg {
+      animation: moveleftleg 5s infinite;
+    }
+
+    .robots:hover .right_leg {
+      animation: moverightleg 5s infinite;
+    }
+ 
+
+    @keyframes moveleftarm {
+      0% {
+        transform: rotate(0deg);
+        transform-origin: top center;
+      }
+
+      25% {
+        transform: rotate(360deg);
+        transform-origin: top center;
+      }
+    }
+
+    @keyframes moverightarm {
+      0% {
+        transform: rotate(0deg);
+        transform-origin: top center;
+      }
+
+      25% {
+        transform: rotate(360deg);
+        transform-origin: top center;
+      }
+    }
+
+    @keyframes moveleftleg {
+      0% {
+        transform: rotate(0deg);
+        transform-origin: top center;
+      }
+
+      25% {
+        transform: rotate(360deg);
+        transform-origin: top center;
+      }
+    }
+
+    @keyframes moverightleg {
+      0% {
+        transform: rotate(0deg);
+        transform-origin: top center;
+      }
+
+      25% {
+        transform: rotate(360deg);
+        transform-origin: top center;
+      }
+    }
+
+  </style>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Dancing Robo</title>
+      </head>
+      <body>
+      <h1>Dancing Robot</h1>
+        <div class="right"></div>
+      </div>
+        <div class="robots">
+          <div class="android">
+            <div class="head">
+              <div class="eyes">
+                <div class="left_eye"></div>
+                <div class="right_eye"></div>
+              </div>
+            </div>
+            <div class="upper_body">
+              <div class="left_arm"></div>
+              <div class="torso">
+              </div>
+              <div class="right_arm"></div>
+            </div>
+            <div class="lower_body">
+              <div class="l_leg">
+                <div class="left_leg"></div>
+                <div class="left_shoe"></div>
+              </div>
+              <div class="r_leg">
+                <div class="right_leg"></div>
+                <div class="right_shoe"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>

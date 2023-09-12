@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./cal.png">
+
+    <title>Calculator</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #222222;
+        color: aliceblue;
+        text-align: center;
+        height: 90vh;
+      }
+      #test{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        gap: 1rem;
+      }
+      input{
+        padding: 6px;
+        border: none;
+        border-radius: 5px;
+        outline: 0;
+      }
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+      }
+      .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .options {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .login-button {
+        color: #fff;
+        padding: 15px 25px;
+        border-radius: 100px;
+        background-color: black;
+        box-shadow: 2px 5px 10px white;
+        font-weight: bold;
+        font-size: 16px;
+
+        border: 0;
+
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+
+        cursor: pointer;
+      }
+      footer{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        footer:hover{
+            color: cadetblue;
+            cursor: pointer;
+        }
+      h1{
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <div class="main-container">
+      <div class="input-container">
+        <input id="num1" type="number" placeholder="Enter your number" />
+        <input id="num2" type="number" placeholder="Enter your number"/>
+      </div>
+      <div class="options">
+        <form id="test">
+          <label><input type="radio" name="test" value="+" checked /> Add</label>
+          <label><input type="radio" name="test" value="-" /> Subtract</label>
+          <label><input type="radio" name="test" value="*" /> Multiply</label>
+          <label><input type="radio" name="test" value="/" /> Divide</label>
+        </form>
+      </div>
+      <button onclick="clicking()" class="login-button">Get Result</button>
+      <h1 id="answer"></h1>
+      <footer>Made by Siva</footer>
+    </div>
+    <script>
+      function clicking() {
+        var form = document.getElementById("test");
+        var num1 = document.getElementById("num1").valueAsNumber;
+        var num2 = document.getElementById("num2").valueAsNumber;
+        if (form.elements["test"].value == "+") {
+          document.getElementById("answer").innerHTML = num1 + num2;
+        }
+        if (form.elements["test"].value == "-") {
+          document.getElementById("answer").innerHTML = num1 - num2;
+        }
+        if (form.elements["test"].value == "*") {
+          document.getElementById("answer").innerHTML = num1 * num2;
+        }
+        if (form.elements["test"].value == "/") {
+          document.getElementById("answer").innerHTML = num1/num2;
+        }
+      }
+    </script>
+  </body>
+</html>

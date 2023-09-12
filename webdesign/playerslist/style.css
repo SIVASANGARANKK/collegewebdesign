@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222222;
+    color: white;
+}
+header{
+    color: black;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    background-color: grey;
+    font-family:'Courier New', Courier, monospace;
+}
+.container{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background-color:#201e1e;
+    height: 90vh;
+}
+.players{
+    background-color: #222222;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 5px;
+    box-shadow:black 5px 5px 5px;
+
+}
+h2{
+    margin-bottom: 5px;
+        padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: aqua;
+}

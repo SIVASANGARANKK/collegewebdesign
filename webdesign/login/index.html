@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-container ">
+        <h2>signup form</h2>
+        <form action="signin.html">
+            <input type="text" name="fn" placeholder="first name" class="login-input">
+            <input type="text" name="ln" placeholder="Last name" class="login-input" required>
+            <input type="date" class="login-input">
+            <input type="email" name="mailid" placeholder="enter your email" class="login-input">
+            <input type="password" name="mailid" placeholder="enter your password" class="login-input">
+            <div class="gen">
+            <label> Gender:</label>
+            <input type="radio" name="gender" id="m">
+            <label for="m">Male</label>
+            <input type="radio" name="gender" id="f">
+            <label for="f">Female</label>
+            <input type="radio" name="gender" id="others">
+            <label for="others">others</label>
+        </div>
+            <input class="login-btn" type="submit" value="signup">
+            <input class="login-btn" type="reset" >
+            <h5>Already have an account? <a href="./signin.html"><span>Sign in</span> </a></h5>
+        </form>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb ON OFF</title>
+    <link rel="icon" type="image/x-icon" href="./bulb.png">
+
+</head>
+<style>
+    h1{
+        color: white;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        flex-direction: column;
+        background-color: #222222;
+    }
+    img{
+        height: 50vh;
+        padding: 8px;
+    }
+    button{
+        background-color: maroon;
+        height: 30px;
+        width: 40px;
+        padding: 5px 5px;
+        margin: 8px;
+        border: none;
+        border-radius: 6px;
+    }
+button:hover{
+    background-color:white;
+    transform: scale(1.1);
+    transition: 1s;
+}
+footer{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    color: white;
+}
+footer:hover{
+    transition-delay: 100ms;
+    transform: scale(1);
+    color: maroon;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+</style>
+<body>
+    <h1>Click the buttons</h1>
+    <img id="bulb" src="./bulb-off.jpg" alt="bulb">
+    <button onclick="bulb(0)">ON</button>
+    <button onclick="bulb(1)" >OFF</button>
+    <footer>Made by siva</footer>
+    <script>
+        function bulb(value){
+            let picture;
+            if(value == 1){
+                picture = "bulb-off.jpg"
+            }
+            else{
+                picture = "bulb-on.jpg"
+            }
+            document.getElementById('bulb').src=picture;
+        }
+    </script>
+</body>
+</html>
